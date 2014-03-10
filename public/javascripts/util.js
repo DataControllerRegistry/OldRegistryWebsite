@@ -1,20 +1,13 @@
 $(document).ready(function() {
 $(".purpose").click(function() {
-	//alert($(this).find("span").length);
-	//if($(this).find("span").length){
-	if($(this).find("span").hasClass('glyphicon glyphicon-plus'))
+	if($(this).find("span").hasClass('glyphicon-plus'))
 	{
-		$(".purpose-title span").remove()
-		$(".purpose-title").append('<span class="glyphicon glyphicon-plus"></span>');
-		$(this).find(".glyphicon").remove(); 
-		$(this).find(".panel-title").append('<span class="glyphicon glyphicon-minus"></span>');
+		$(".purpose span").removeClass("glyphicon-minus").addClass("glyphicon-plus");
+		$(this).find("span").removeClass("glyphicon-plus").addClass("glyphicon-minus");
 	}
 	else
 	{   
-		$(this).find(".glyphicon").remove(); 
-		$(this).find(".panel-title").append('<span class="glyphicon glyphicon-plus"></span>');
-		
+		$(this).find("span").removeClass("glyphicon-minus").addClass("glyphicon-plus");
 	}
-	//}
-}); 
+});
 });

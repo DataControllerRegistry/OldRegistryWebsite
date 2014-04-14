@@ -49,7 +49,14 @@
 
 .graph svg{
 	width:100%;
+	max-height:250px;
 }
+
+.statistics{
+	max-height:415px;
+	min-height:415px;
+}
+
 
 #clear-graph{
 	display:block;
@@ -96,3 +103,11 @@ body {
 	width:35%;
 }
 
+.purpose-stat{
+	min-height:350px;	
+}
+
+.vertical-center{
+	margin-top:32.5%;
+	text-align:center;
+}

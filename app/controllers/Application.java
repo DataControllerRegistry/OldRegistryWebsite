@@ -16,18 +16,19 @@ import models.*;
 
 public class Application extends Controller {
 
-		
+	 private static DB database = Util.connectToDB();
+	
 	public static Result index() {	  
         return ok(index.render("Privacy Matters"));
     }
 	
 	public static Result similar(String registrationNumber,String type,String information){
 		information = information.replaceAll("_", " ");
+		information = information.replaceAll("-","/");
 		ArrayList<RegistryListItem> regList = new ArrayList<RegistryListItem>();
 		try{
 			DBObject controller;
 			String json;
-			DB database = Util.connectToDB();
 			DBCollection registry = database.getCollection(type+"Stats");
 			BasicDBObject query = new BasicDBObject("type",information);
 			DBCursor cursor = registry.find(query);
@@ -76,7 +77,6 @@ public class Application extends Controller {
 	    	DBObject controller;
     		String json;
     		JsonNode node;
-	    	DB database = Util.connectToDB();
 	    	DBCollection registry = database.getCollection("registry");
 			BasicDBObject query = new BasicDBObject();
 			query.put("organisationName", java.util.regex.Pattern.compile(queryString.toUpperCase()));
@@ -106,7 +106,6 @@ public class Application extends Controller {
     		DBObject controller;
     		String json;
     		JsonNode node;
-    		DB database = Util.connectToDB();
     		DBCollection registry = database.getCollection("registry");
     		DBCursor cursor = registry.find();
     		while(cursor.hasNext()){
@@ -134,7 +133,6 @@ public class Application extends Controller {
 		String statement = "(cannot connect)";
 		String json;
 		try {
-			DB database = Util.connectToDB();
 			Gson gson = new Gson();
 			DBCollection collection = database.getCollection("generalStats");
 			DBCursor cursor = collection.find();
@@ -213,7 +211,6 @@ public class Application extends Controller {
 	public static DataController getDataController(String registrationNumber){
     	DataController controller = new DataController();
     	try{
-    		DB database = Util.connectToDB();
     		DBCollection registry = database.getCollection("registry");
     		BasicDBObject query = new BasicDBObject("registrationNumber",registrationNumber);
     		DBCursor cursor = registry.find(query);

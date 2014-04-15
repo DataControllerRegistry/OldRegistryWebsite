@@ -53,8 +53,8 @@
 }
 
 .statistics{
-	max-height:415px;
-	min-height:415px;
+	max-height:430px;
+	min-height:430px;
 }
 
 
@@ -110,4 +110,8 @@ body {
 .vertical-center{
 	margin-top:32.5%;
 	text-align:center;
+}
+
+#search-bar{
+	margin-top:10px;
 }

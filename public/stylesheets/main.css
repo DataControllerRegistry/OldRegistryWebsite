@@ -1,0 +1,50 @@
+#map_canvas {
+        width: 500px;
+        height: 400px;
+        background-color: #CCC;
+      }
+      
+.row {
+    display: table;
+}
+
+[class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+}
+
+.panel-body{
+	height :100%;
+}
+
+.dl-horizontal dt{
+	width:50%;
+	text-align:left;
+}
+
+.dl-horizontal dd{
+	width:50%;
+}
+
+.panel-heading {
+    cursor: pointer;
+}
+
+.glyphicon{
+	float:right;
+}
+
+/*
+.panel-heading .accordion-toggle:after {
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+    content: "\2a";    /* adjust as needed, taken from bootstrap.css */
+    float: right;        /* adjust as needed */
+    color: grey;         /* adjust as needed */
+}
+*/
+
+
+
+

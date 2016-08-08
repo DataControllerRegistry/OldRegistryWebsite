@@ -1,7 +1,5 @@
 package controllers;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.net.UnknownHostException;
 
 import com.mongodb.DB;
@@ -13,11 +11,11 @@ public class Util {
 
 	public static DB connectToDB(){
 		try{
-			String uri = new BufferedReader(new FileReader("public/connection.txt")).readLine();
+			String uri = System.getenv("MLAB_URI");
 			MongoClientURI dbURI = new MongoClientURI(uri);
-		client = new MongoClient(dbURI);
-		DB database = client.getDB(dbURI.getDatabase());
-		return database;
+			client = new MongoClient(dbURI);
+			DB database = client.getDB(dbURI.getDatabase());
+			return database;
 		}catch(Exception ex){
 			return null;
 		}

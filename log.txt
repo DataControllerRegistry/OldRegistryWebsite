@@ -1,0 +1,101 @@
+2014-04-14T20:28:37.397345+00:00 app[web.1]: 	at controllers.Util.connectToDB(Util.java:15) ~[privacymatters_2.10-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+2014-04-14T20:28:37.397345+00:00 app[web.1]: 	at java.lang.Thread.start(Thread.java:713) [na:1.7.0_45]
+2014-04-14T20:28:37.397345+00:00 app[web.1]: 	at com.mongodb.Mongo.<init>(Mongo.java:349) ~[mongo-java-driver-2.10.1.jar:na]
+2014-04-14T20:28:37.397345+00:00 app[web.1]: 	at controllers.Application.getDataController(Application.java:216) ~[privacymatters_2.10-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+2014-04-14T20:28:37.401367+00:00 heroku[router]: at=info method=GET path=/dataController/Z9461299 host=privacymatters.herokuapp.com request_id=fed8656c-1fac-40b2-95e1-4ee33de4b7ee fwd="82.31.230.145" dyno=web.1 connect=7ms service=35ms status=500 bytes=2060
+2014-04-14T20:28:37.397037+00:00 app[web.1]: 	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:249) ~[scala-library.jar:na]
+2014-04-14T20:28:37.397037+00:00 app[web.1]: 	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) ~[scala-library.jar:na]
+2014-04-14T20:28:37.397037+00:00 app[web.1]: 	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.liftedTree1$1(BatchingExecutor.scala:67) ~[akka-actor_2.10-2.1.0.jar:na]
+2014-04-14T20:28:37.397037+00:00 app[web.1]: Caused by: java.lang.OutOfMemoryError: unable to create new native thread
+2014-04-14T20:28:38.152734+00:00 app[web.1]: 
+2014-04-14T20:28:38.152734+00:00 app[web.1]: 	at play.api.DefaultApplication.handleError(Application.scala:381) [play_2.10-2.1.5.jar:2.1.5]
+2014-04-14T20:28:38.152734+00:00 app[web.1]: play.api.Application$$anon$1: Execution exception[[RuntimeException: java.lang.OutOfMemoryError: unable to create new native thread]]
+2014-04-14T20:28:38.152734+00:00 app[web.1]: [[31merror[0m] application - 
+2014-04-14T20:28:38.152734+00:00 app[web.1]: 	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$play$core$server$netty$PlayDefaultUpstreamHandler$$handle$1$1.apply(PlayDefaultUpstreamHandler.scala:143) [play_2.10-2.1.5.jar:2.1.5]
+2014-04-14T20:28:38.152734+00:00 app[web.1]: ! @6hpnhchp7 - Internal server error, for (GET) [/dataController/Z9461299] ->
+2014-04-14T20:28:38.152734+00:00 app[web.1]: 
+2014-04-14T20:28:38.152734+00:00 app[web.1]: 	at play.api.Application$class.handleError(Application.scala:287) ~[play_2.10-2.1.5.jar:2.1.5]
+2014-04-14T20:28:38.152962+00:00 app[web.1]: 	at play.api.libs.concurrent.PlayPromise$$anonfun$extend1$1.apply(Promise.scala:113) [play_2.10-2.1.5.jar:2.1.5]
+2014-04-14T20:28:38.152962+00:00 app[web.1]: java.lang.RuntimeException: java.lang.OutOfMemoryError: unable to create new native thread
+2014-04-14T20:28:38.152962+00:00 app[web.1]: 	at play.libs.F$Promise$6.apply(F.java:401) ~[play_2.10-2.1.5.jar:2.1.5]
+2014-04-14T20:28:38.152734+00:00 app[web.1]: 	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$play$core$server$netty$PlayDefaultUpstreamHandler$$handle$1$1.apply(PlayDefaultUpstreamHandler.scala:139) [play_2.10-2.1.5.jar:2.1.5]
+2014-04-14T20:28:38.152734+00:00 app[web.1]: 	at play.api.libs.concurrent.PlayPromise$$anonfun$extend1$1.apply(Promise.scala:113) [play_2.10-2.1.5.jar:2.1.5]
+2014-04-14T20:28:38.152962+00:00 app[web.1]: 	at scala.concurrent.Future$$anonfun$map$1.liftedTree2$1(Future.scala:253) ~[scala-library.jar:na]
+2014-04-14T20:28:38.152962+00:00 app[web.1]: Caused by: java.lang.OutOfMemoryError: unable to create new native thread
+2014-04-14T20:28:38.152962+00:00 app[web.1]: 	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.liftedTree1$1(BatchingExecutor.scala:67) ~[akka-actor_2.10-2.1.0.jar:na]
+2014-04-14T20:28:38.152962+00:00 app[web.1]: 	at java.lang.Thread.start0(Native Method) [na:1.7.0_45]
+2014-04-14T20:28:38.153162+00:00 app[web.1]: 	at java.lang.Thread.start(Thread.java:713) [na:1.7.0_45]
+2014-04-14T20:28:38.153162+00:00 app[web.1]: 	at com.mongodb.MongoClient.<init>(MongoClient.java:192) ~[mongo-java-driver-2.10.1.jar:na]
+2014-04-14T20:28:38.153162+00:00 app[web.1]: 	at com.mongodb.Mongo.<init>(Mongo.java:349) ~[mongo-java-driver-2.10.1.jar:na]
+2014-04-14T20:28:38.152962+00:00 app[web.1]: 	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:249) ~[scala-library.jar:na]
+2014-04-14T20:28:38.152962+00:00 app[web.1]: 	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:249) ~[scala-library.jar:na]
+2014-04-14T20:28:38.152962+00:00 app[web.1]: 	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) ~[scala-library.jar:na]
+2014-04-14T20:28:38.153162+00:00 app[web.1]: 	at controllers.Util.connectToDB(Util.java:15) ~[privacymatters_2.10-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+2014-04-14T20:28:38.153162+00:00 app[web.1]: 	at controllers.Application.getDataController(Application.java:216) ~[privacymatters_2.10-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+2014-04-14T20:28:38.231243+00:00 heroku[router]: at=info method=GET path=/dataController/Z9461299 host=privacymatters.herokuapp.com request_id=caa1b511-e301-4620-801f-aa38b6b376dc fwd="82.31.230.145" dyno=web.1 connect=9ms service=99ms status=500 bytes=2060
+2014-04-14T20:28:36.651116+00:00 heroku[router]: at=info method=GET path=/dataController/Z9461299 host=privacymatters.herokuapp.com request_id=18fefed2-5996-4706-a464-b635f1abf6ef fwd="82.31.230.145" dyno=web.1 connect=1ms service=12ms status=500 bytes=2060
+2014-04-14T20:26:20.144980+00:00 heroku[router]: at=info method=GET path=/assets/javascripts/bootstrap.min.js host=privacymatters.herokuapp.com request_id=95ff547e-0533-46a2-b608-c81c9ddca871 fwd="82.31.230.145" dyno=web.1 connect=16ms service=44ms status=304 bytes=192
+2014-04-14T20:28:19.218527+00:00 heroku[router]: at=info method=GET path=/0 host=privacymatters.herokuapp.com request_id=086f6a4b-1248-4ee0-a1e5-09d814a99f53 fwd="82.31.230.145" dyno=web.1 connect=1ms service=26ms status=404 bytes=2007
+2014-04-14T20:28:35.969528+00:00 heroku[router]: at=info method=GET path=/dataController/Z9461299 host=privacymatters.herokuapp.com request_id=873d71e4-0edf-4693-af78-88eccc7beda7 fwd="82.31.230.145" dyno=web.1 connect=1ms service=14ms status=500 bytes=2060
+2014-04-14T20:26:33.746259+00:00 heroku[router]: at=info method=GET path=/assets/javascripts/map.js host=privacymatters.herokuapp.com request_id=a0692632-8e99-4048-9ad1-28b8aac442fd fwd="82.31.230.145" dyno=web.1 connect=12ms service=42ms status=304 bytes=192
+2014-04-14T20:31:07.019963+00:00 app[web.1]: play.api.Application$$anon$1: Execution exception[[RuntimeException: java.lang.OutOfMemoryError: unable to create new native thread]]
+2014-04-14T20:31:07.019963+00:00 app[web.1]: 
+2014-04-14T20:31:07.019963+00:00 app[web.1]: [[31merror[0m] application - 
+2014-04-14T20:31:07.024508+00:00 heroku[router]: at=info method=GET path=/dataController/Z9461299 host=privacymatters.herokuapp.com request_id=754d4eb4-a6da-47ce-a9e7-eb043e8f6eb1 fwd="82.31.230.145" dyno=web.1 connect=4ms service=101ms status=500 bytes=2060
+2014-04-14T20:31:07.019963+00:00 app[web.1]: 
+2014-04-14T20:31:07.019963+00:00 app[web.1]: ! @6hpnhl451 - Internal server error, for (GET) [/dataController/Z9461299] ->
+2014-04-14T20:31:07.019963+00:00 app[web.1]: 	at play.api.Application$class.handleError(Application.scala:287) ~[play_2.10-2.1.5.jar:2.1.5]
+2014-04-14T20:31:07.019963+00:00 app[web.1]: 	at play.api.DefaultApplication.handleError(Application.scala:381) [play_2.10-2.1.5.jar:2.1.5]
+2014-04-14T20:31:07.019963+00:00 app[web.1]: 	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$play$core$server$netty$PlayDefaultUpstreamHandler$$handle$1$1.apply(PlayDefaultUpstreamHandler.scala:143) [play_2.10-2.1.5.jar:2.1.5]
+2014-04-14T20:31:07.019963+00:00 app[web.1]: 	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$play$core$server$netty$PlayDefaultUpstreamHandler$$handle$1$1.apply(PlayDefaultUpstreamHandler.scala:139) [play_2.10-2.1.5.jar:2.1.5]
+2014-04-14T20:31:07.020170+00:00 app[web.1]: 	at play.libs.F$Promise$6.apply(F.java:401) ~[play_2.10-2.1.5.jar:2.1.5]
+2014-04-14T20:31:07.020170+00:00 app[web.1]: 	at play.api.libs.concurrent.PlayPromise$$anonfun$extend1$1.apply(Promise.scala:113) [play_2.10-2.1.5.jar:2.1.5]
+2014-04-14T20:31:07.020170+00:00 app[web.1]: java.lang.RuntimeException: java.lang.OutOfMemoryError: unable to create new native thread
+2014-04-14T20:31:07.019963+00:00 app[web.1]: 	at play.api.libs.concurrent.PlayPromise$$anonfun$extend1$1.apply(Promise.scala:113) [play_2.10-2.1.5.jar:2.1.5]
+2014-04-14T20:31:07.020170+00:00 app[web.1]: 	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) ~[scala-library.jar:na]
+2014-04-14T20:31:07.020170+00:00 app[web.1]: 	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.liftedTree1$1(BatchingExecutor.scala:67) ~[akka-actor_2.10-2.1.0.jar:na]
+2014-04-14T20:31:07.020170+00:00 app[web.1]: Caused by: java.lang.OutOfMemoryError: unable to create new native thread
+2014-04-14T20:31:07.020170+00:00 app[web.1]: 	at java.lang.Thread.start0(Native Method) [na:1.7.0_45]
+2014-04-14T20:31:07.020335+00:00 app[web.1]: 	at java.lang.Thread.start(Thread.java:713) [na:1.7.0_45]
+2014-04-14T20:31:07.020335+00:00 app[web.1]: 	at com.mongodb.Mongo.<init>(Mongo.java:349) ~[mongo-java-driver-2.10.1.jar:na]
+2014-04-14T20:31:07.020170+00:00 app[web.1]: 	at scala.concurrent.Future$$anonfun$map$1.liftedTree2$1(Future.scala:253) ~[scala-library.jar:na]
+2014-04-14T20:31:07.020170+00:00 app[web.1]: 	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:249) ~[scala-library.jar:na]
+2014-04-14T20:31:07.020170+00:00 app[web.1]: 	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:249) ~[scala-library.jar:na]
+2014-04-14T20:31:07.020335+00:00 app[web.1]: 	at com.mongodb.MongoClient.<init>(MongoClient.java:192) ~[mongo-java-driver-2.10.1.jar:na]
+2014-04-14T20:31:07.020335+00:00 app[web.1]: 	at controllers.Util.connectToDB(Util.java:15) ~[privacymatters_2.10-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+2014-04-14T20:31:07.020335+00:00 app[web.1]: 	at controllers.Values.getNumberOfControllers(Values.java:99) ~[privacymatters_2.10-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+2014-04-14T20:31:09.294968+00:00 app[web.1]: 	at play.api.Application$class.handleError(Application.scala:287) ~[play_2.10-2.1.5.jar:2.1.5]
+2014-04-14T20:31:09.294968+00:00 app[web.1]: play.api.Application$$anon$1: Execution exception[[RuntimeException: java.lang.OutOfMemoryError: unable to create new native thread]]
+2014-04-14T20:31:09.294968+00:00 app[web.1]: 
+2014-04-14T20:31:09.294968+00:00 app[web.1]: [[31merror[0m] application - 
+2014-04-14T20:31:09.294968+00:00 app[web.1]: 
+2014-04-14T20:31:09.294968+00:00 app[web.1]: 	at play.api.DefaultApplication.handleError(Application.scala:381) [play_2.10-2.1.5.jar:2.1.5]
+2014-04-14T20:31:09.294968+00:00 app[web.1]: ! @6hpnhl7ed - Internal server error, for (GET) [/dataController/Z9461299] ->
+2014-04-14T20:31:09.294968+00:00 app[web.1]: 	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$play$core$server$netty$PlayDefaultUpstreamHandler$$handle$1$1.apply(PlayDefaultUpstreamHandler.scala:139) [play_2.10-2.1.5.jar:2.1.5]
+2014-04-14T20:31:09.294968+00:00 app[web.1]: 	at play.api.libs.concurrent.PlayPromise$$anonfun$extend1$1.apply(Promise.scala:113) [play_2.10-2.1.5.jar:2.1.5]
+2014-04-14T20:31:09.294968+00:00 app[web.1]: 	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$play$core$server$netty$PlayDefaultUpstreamHandler$$handle$1$1.apply(PlayDefaultUpstreamHandler.scala:143) [play_2.10-2.1.5.jar:2.1.5]
+2014-04-14T20:31:09.295365+00:00 app[web.1]: 	at controllers.Util.connectToDB(Util.java:15) ~[privacymatters_2.10-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+2014-04-14T20:31:09.295187+00:00 app[web.1]: 	at play.api.libs.concurrent.PlayPromise$$anonfun$extend1$1.apply(Promise.scala:113) [play_2.10-2.1.5.jar:2.1.5]
+2014-04-14T20:31:09.295187+00:00 app[web.1]: java.lang.RuntimeException: java.lang.OutOfMemoryError: unable to create new native thread
+2014-04-14T20:31:09.295187+00:00 app[web.1]: 	at play.libs.F$Promise$6.apply(F.java:401) ~[play_2.10-2.1.5.jar:2.1.5]
+2014-04-14T20:31:09.295187+00:00 app[web.1]: 	at scala.concurrent.Future$$anonfun$map$1.liftedTree2$1(Future.scala:253) ~[scala-library.jar:na]
+2014-04-14T20:31:09.295187+00:00 app[web.1]: 	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:249) ~[scala-library.jar:na]
+2014-04-14T20:31:09.295187+00:00 app[web.1]: 	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:249) ~[scala-library.jar:na]
+2014-04-14T20:31:09.295187+00:00 app[web.1]: 	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) ~[scala-library.jar:na]
+2014-04-14T20:31:09.295187+00:00 app[web.1]: 	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.liftedTree1$1(BatchingExecutor.scala:67) ~[akka-actor_2.10-2.1.0.jar:na]
+2014-04-14T20:31:09.295187+00:00 app[web.1]: Caused by: java.lang.OutOfMemoryError: unable to create new native thread
+2014-04-14T20:31:09.295187+00:00 app[web.1]: 	at java.lang.Thread.start0(Native Method) [na:1.7.0_45]
+2014-04-14T20:31:09.295365+00:00 app[web.1]: 	at java.lang.Thread.start(Thread.java:713) [na:1.7.0_45]
+2014-04-14T20:31:09.295365+00:00 app[web.1]: 	at com.mongodb.Mongo.<init>(Mongo.java:349) ~[mongo-java-driver-2.10.1.jar:na]
+2014-04-14T20:31:09.295365+00:00 app[web.1]: 	at com.mongodb.MongoClient.<init>(MongoClient.java:192) ~[mongo-java-driver-2.10.1.jar:na]
+2014-04-14T20:31:09.295365+00:00 app[web.1]: 	at controllers.Application.getDataController(Application.java:216) ~[privacymatters_2.10-1.0-SNAPSHOT.jar:1.0-SNAPSHOT]
+2014-04-14T20:31:09.302294+00:00 heroku[router]: at=info method=GET path=/dataController/Z9461299 host=privacymatters.herokuapp.com request_id=c63a634f-5871-4eca-99b6-d5108400457d fwd="82.31.230.145" dyno=web.1 connect=7ms service=17ms status=500 bytes=2060
+2014-04-14T20:31:10.865654+00:00 heroku[web.1]: Process exited with status 255
+2014-04-14T20:31:10.881519+00:00 heroku[web.1]: State changed from up to crashed
+2014-04-14T20:31:15.125231+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/dataController/Z9461299 host=privacymatters.herokuapp.com request_id=e3d42a47-3bc3-40a8-980f-7568668228df fwd="82.31.230.145" dyno= connect= service= status=503 bytes=
+2014-04-14T20:31:16.730648+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/favicon.ico host=privacymatters.herokuapp.com request_id=3de0c563-12df-413e-bd48-68fd77c5986d fwd="82.31.230.145" dyno= connect= service= status=503 bytes=
+2014-04-14T20:26:33.906986+00:00 heroku[router]: at=info method=GET path=/dataController/0 host=privacymatters.herokuapp.com request_id=af0c5cbc-9a88-4428-a7d5-7727fd9151e0 fwd="82.31.230.145" dyno=web.1 connect=15ms service=125ms status=404 bytes=123
+2014-04-14T20:34:20.324397+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/dataController/Z9461299 host=privacymatters.herokuapp.com request_id=ccfee475-89dc-4b6d-a4e7-98846e20c299 fwd="82.31.230.145" dyno= connect= service= status=503 bytes=
+2014-04-14T20:34:31.972111+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/ host=privacymatters.herokuapp.com request_id=0ca22055-0ba0-4c48-8333-8dc8c0417335 fwd="82.31.230.145" dyno= connect= service= status=503 bytes=
+2014-04-14T20:34:32.533312+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/favicon.ico host=privacymatters.herokuapp.com request_id=e0702a09-4147-410e-a9c4-420ba1e2276b fwd="82.31.230.145" dyno= connect= service= status=503 bytes=
+2014-04-14T20:34:21.363213+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/favicon.ico host=privacymatters.herokuapp.com request_id=b3fe742c-2027-4d76-a609-3a9987723e27 fwd="82.31.230.145" dyno= connect= service= status=503 bytes=

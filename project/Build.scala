@@ -8,7 +8,7 @@ object ApplicationBuild extends Build {
   val appVersion      = "1.0-SNAPSHOT"
 
   val appDependencies = Seq(
-   "org.mongodb" % "mongo-java-driver" % "2.10.1",
+   "org.mongodb" % "mongo-java-driver" % "3.3.0",
    "com.google.code.gson" % "gson" % "2.2.4",
     javaCore,
     javaJdbc,

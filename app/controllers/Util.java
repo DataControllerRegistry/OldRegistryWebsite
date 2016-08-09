@@ -11,12 +11,13 @@ public class Util {
 
 	public static DB connectToDB(){
 		try{
-			String uri = System.getenv("MLAB_URI");
+			String uri = System.getenv("MONGODB_URI");
 			MongoClientURI dbURI = new MongoClientURI(uri);
 			client = new MongoClient(dbURI);
 			DB database = client.getDB(dbURI.getDatabase());
 			return database;
 		}catch(Exception ex){
+			System.out.println("connection failure: "+ ex);
 			return null;
 		}
 	}

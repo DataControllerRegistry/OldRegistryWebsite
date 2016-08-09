@@ -124,6 +124,7 @@ public class Application extends Controller {
     		}
         	return regList;
     	}catch(Exception e){
+    		System.out.println("registry failure: " + e);
     		return regList;
     	}
     }
